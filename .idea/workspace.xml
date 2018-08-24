@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd7c65b5-037c-4662-8d48-93e303fb75b2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dome/data/structure/linked/Linked.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dome/data/structure/queue/QueueDome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dome/date/DateFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dome/date/TestDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dome/data/structure/list/list.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dome/network/CheckPort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dome/network/GetIP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dome/network/SocketDome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dome/network/UploadPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dome/temer/TestTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dome/timer/TestTimer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dome/temer/TimerScheduled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dome/timer/TimerScheduled.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dome/temer/TimerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dome/timer/TimerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dome/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dome/MainApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dome/temer/TestTimer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dome/temer/TimerScheduled.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dome/temer/TimerThread.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,14 +40,100 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueueDome.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QueueDome.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/data/structure/queue/QueueDome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="479">
               <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#265#273#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/data/structure/list/list.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetIP.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/network/GetIP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckPort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/network/CheckPort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SocketDome.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/network/SocketDome.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="490">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadPage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/network/UploadPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InetAddress.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/net/InetAddress.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="669" column="18" selection-start-line="669" selection-start-column="18" selection-end-line="669" selection-end-column="18" />
+              <folding>
+                <element signature="e#24187#24188#0" expanded="true" />
+                <element signature="e#24214#24215#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Arrays.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Arrays.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-345">
+              <caret line="3798" column="30" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
+              <folding>
+                <element signature="e#177013#177014#0" expanded="true" />
+                <element signature="e#177054#177055#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,6 +159,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/dome/data/structure/Linked.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dome/data/structure/linked/Linked.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dome/data/structure/queue/QueueDome.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dome/data/structure/list/list.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dome/network/GetIP.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dome/network/CheckPort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dome/network/SocketDome.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dome/network/UploadPage.java" />
       </list>
     </option>
   </component>
@@ -144,17 +228,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dome" type="462c0819:PsiDirectoryNode" />
-              <item name="structure" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dome-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="domejava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dome" type="462c0819:PsiDirectoryNode" />
-              <item name="structure" type="462c0819:PsiDirectoryNode" />
-              <item name="queue" type="462c0819:PsiDirectoryNode" />
+              <item name="network" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dome-java" type="b2602c69:ProjectViewProjectNode" />
@@ -190,14 +264,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.QueueDome">
-    <configuration name="Linked" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dome.data.structure.linked.Linked" />
+  <component name="RunManager" selected="Application.SocketDome">
+    <configuration name="CheckPort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dome.network.CheckPort" />
       <module name="dome-java" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dome.data.structure.linked.*" />
+          <option name="PATTERN" value="com.dome.network.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="GetIP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dome.network.GetIP" />
+      <module name="dome-java" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dome.network.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -213,19 +298,30 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TestDate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dome.date.TestDate" />
+    <configuration name="SocketDome" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dome.network.SocketDome" />
       <module name="dome-java" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dome.date.*" />
+          <option name="PATTERN" value="com.dome.network.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="list" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dome.data.structure.list.list" />
+      <module name="dome-java" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dome.data.structure.list.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -266,15 +362,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.TestDate" />
-      <item itemvalue="Application.Linked" />
       <item itemvalue="Application.QueueDome" />
+      <item itemvalue="Application.list" />
+      <item itemvalue="Application.GetIP" />
+      <item itemvalue="Application.CheckPort" />
+      <item itemvalue="Application.SocketDome" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SocketDome" />
+        <item itemvalue="Application.CheckPort" />
+        <item itemvalue="Application.GetIP" />
+        <item itemvalue="Application.list" />
         <item itemvalue="Application.QueueDome" />
-        <item itemvalue="Application.Linked" />
-        <item itemvalue="Application.TestDate" />
       </list>
     </recent_temporary>
   </component>
@@ -288,12 +388,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535077449144</updated>
-      <workItem from="1535077455993" duration="4540000" />
+      <workItem from="1535077455993" duration="9034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4540000" />
+    <option name="totallyTimeSpent" value="9034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1672" y="-8" width="1696" height="1066" extended-state="6" />
@@ -316,11 +416,11 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34734514" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34734514" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Spring" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" x="2310" y="126" width="420" height="869" id="Project" order="0" side_tool="true" visible="true" weight="0.25305623" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32964602" />
+      <window_info active="true" content_ui="combo" x="2310" y="126" width="420" height="869" id="Project" order="0" side_tool="true" visible="true" weight="0.25305623" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -380,11 +480,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/data/structure/queue/QueueDome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="479">
           <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#265#273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="3798" column="30" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
+          <folding>
+            <element signature="e#177013#177014#0" expanded="true" />
+            <element signature="e#177054#177055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/data/structure/list/list.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/net/InetAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="669" column="18" selection-start-line="669" selection-start-column="18" selection-end-line="669" selection-end-column="18" />
+          <folding>
+            <element signature="e#24187#24188#0" expanded="true" />
+            <element signature="e#24214#24215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/network/GetIP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/network/CheckPort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/network/SocketDome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/network/UploadPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
