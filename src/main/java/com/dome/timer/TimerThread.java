@@ -1,4 +1,4 @@
-package com.dome.temer;
+package com.dome.timer;
 
 /**
  * 线程定时器

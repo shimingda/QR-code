@@ -1,4 +1,4 @@
-package com.dome.temer;
+package com.dome.timer;
 
 /**
  * 定时器任务测试类

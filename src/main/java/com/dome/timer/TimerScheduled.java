@@ -1,4 +1,4 @@
-package com.dome.temer;
+package com.dome.timer;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
