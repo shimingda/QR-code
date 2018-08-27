@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
-import java.net.URI;
+import java.net.URL;
 
 /**
  * 读取页面
@@ -12,9 +12,9 @@ import java.net.URI;
 public class UploadPage {
     public static void main(String[] args)
             throws Exception {
-        URI url = new URI("http://www.runoob.com");
+        URL url = new URL("http://www.runoob.com");
         BufferedReader reader = new BufferedReader
-                (new InputStreamReader(url));
+                (new InputStreamReader(url.openStream()));
         BufferedWriter writer = new BufferedWriter
                 (new FileWriter("data.html"));
         String line;
