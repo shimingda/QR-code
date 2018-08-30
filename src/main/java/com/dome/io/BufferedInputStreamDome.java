@@ -41,6 +41,7 @@ import java.io.InputStream;
 public class BufferedInputStreamDome {
     public static void main(String[] args) throws Exception {
 
+
         InputStream inStream = null;
         BufferedInputStream bis = null;
 
