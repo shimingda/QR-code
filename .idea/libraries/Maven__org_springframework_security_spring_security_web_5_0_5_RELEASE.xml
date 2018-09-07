@@ -9,7 +9,6 @@
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.5.RELEASE/spring-security-web-5.0.5.RELEASE-sources.jar!/" />
       <root url="file://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.5.RELEASE" />
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.5.RELEASE/spring-security-web-5.0.5.RELEASE.jar!/" />
     </SOURCES>
   </library>
 </component>

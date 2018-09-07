@@ -34,6 +34,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <!-- 以thymeleaf的形式渲染页面 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

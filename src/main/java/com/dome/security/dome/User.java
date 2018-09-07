@@ -1,8 +1,6 @@
 package com.dome.security.dome;
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -16,14 +14,9 @@ import java.util.Collection;
 
 public class User  implements UserDetails, Serializable {
 
-    private static final Logger logger = LoggerFactory.getLogger(User.class);
-
-    private static final long serialVersionUID = -383540476492602568L;
-
-    private Long id;
-
     /**
      * 用户名，登录名
+
      */
 
     private String username;
@@ -38,20 +31,19 @@ public class User  implements UserDetails, Serializable {
      * 联系电话
      */
 
-    private String telephone;
-
-    /**
-     * 邮箱
-     */
-
-    private String email;
-
-    /**
-     * 是否可用
-     */
-
     private boolean enabled;
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
