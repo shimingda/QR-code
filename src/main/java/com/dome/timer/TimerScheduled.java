@@ -1,6 +1,5 @@
 package com.dome.timer;
 
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,7 +7,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class TimerScheduled {
-    @Scheduled(fixedRate = 3000)
+//    @Scheduled(fixedRate = 3000)
     public void runTime(){
         System.out.println("running");
     }
