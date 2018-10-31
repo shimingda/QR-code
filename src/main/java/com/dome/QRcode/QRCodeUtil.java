@@ -1,16 +1,20 @@
 package com.dome.QRcode;
 
-import com.google.zxing.*;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.EncodeHintType;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.HybridBinarizer;
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import org.apache.commons.codec.binary.Base64OutputStream;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
+import java.io.*;
+import java.util.Base64;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map;
-import java.util.Random;
 
 /**
  * @author Simon
@@ -18,81 +22,214 @@ import java.util.Random;
  * @desc
  **/
 public class QRCodeUtil {
+    public static final String QRCODE_DEFAULT_CHARSET = "UTF-8";
+
+    public static final int QRCODE_DEFAULT_HEIGHT = 400;
+
+    public static final int QRCODE_DEFAULT_WIDTH = 400;
+
+    private static final int BLACK = 0xFF000000;
+    private static final int WHITE = 0xFFFFFFFF;
 
     /**
-     * 根据内容，生成指定宽高、指定格式的二维码图片
+     * Create qrcode with default settings
      *
-     * @param text   内容
-     * @param width  宽
-     * @param height 高
-     * @param format 图片格式
-     * @return 生成的二维码图片路径
-     * @throws Exception
-     */
-    public static String generateQRCode(String text, int width, int height, String format) throws Exception {
-        Hashtable<EncodeHintType, Object> hints = new Hashtable<>();
-        hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
-        BitMatrix bitMatrix = new MultiFormatWriter().encode(text, BarcodeFormat.QR_CODE, width, height, hints);
-        String pathName = "D:/new.png";
-        File outputFile = new File(pathName);
-        MatrixToImageWriter.writeToFile(bitMatrix, format, outputFile);
-        return pathName;
-    }
-    /**
-     * 随机生成指定长度的验证码
-     *
-     * @param length 验证码长度
-     * @return 生成的验证码
-     */
-    public static String generateNumCode(int length) {
-        String val = "";
-        String charStr = "char";
-        String numStr = "num";
-        Random random = new Random();
-
-        //参数length，表示生成几位随机数
-        for (int i = 0; i < length; i++) {
-
-            String charOrNum = random.nextInt(2) % 2 == 0 ? charStr : numStr;
-            //输出字母还是数字
-            if (charStr.equalsIgnoreCase(charOrNum)) {
-                //输出是大写字母还是小写字母
-                int temp = random.nextInt(2) % 2 == 0 ? 65 : 97;
-                val += (char) (random.nextInt(26) + temp);
-            } else if (numStr.equalsIgnoreCase(charOrNum)) {
-                val += String.valueOf(random.nextInt(10));
-            }
-        }
-        return val;
-    }
-    /**
-     * 解析指定路径下的二维码图片
-     *
-     * @param filePath 二维码图片路径
+     * @author stefli
+     * @param data
      * @return
      */
-    public static String parseQRCode(String filePath) {
-        String content = "";
-        try {
-            File file = new File(filePath);
-            BufferedImage image = ImageIO.read(file);
-            LuminanceSource source = new BufferedImageLuminanceSource(image);
-            Binarizer binarizer = new HybridBinarizer(source);
-            BinaryBitmap binaryBitmap = new BinaryBitmap(binarizer);
-            Map<DecodeHintType, Object> hints = new HashMap<>();
-            hints.put(DecodeHintType.CHARACTER_SET, "UTF-8");
-            MultiFormatReader formatReader = new MultiFormatReader();
-            Result result = formatReader.decode(binaryBitmap, hints);
-
-            System.out.println("result 为：" + result.toString());
-            System.out.println("resultFormat 为：" + result.getBarcodeFormat());
-            System.out.println("resultText 为：" + result.getText());
-            //设置返回值
-            content = result.getText();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return content;
+    public static BufferedImage createQRCode(String data) {
+        return createQRCode(data, QRCODE_DEFAULT_WIDTH, QRCODE_DEFAULT_HEIGHT);
     }
 
+    /**
+     * Create qrcode with default charset
+     *
+     * @author stefli
+     * @param data
+     * @param width
+     * @param height
+     * @return
+     */
+    public static BufferedImage createQRCode(String data, int width, int height) {
+        return createQRCode(data, QRCODE_DEFAULT_CHARSET, width, height);
+    }
+    /**
+     * Create qrcode with specified charset
+     *
+     * @author stefli
+     * @param data
+     * @param charset
+     * @param width
+     * @param height
+     * @return
+     */
+    public static BufferedImage createQRCode(String data, String charset, int width, int height) {
+        Map hint = new HashMap();
+        hint.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
+        hint.put(EncodeHintType.CHARACTER_SET, charset);
+
+        return createQRCode(data, charset, hint, width, height);
+    }
+    /**
+     * Create qrcode with specified hint
+     *
+     * @author stefli
+     * @param data
+     * @param charset
+     * @param hint
+     * @param width
+     * @param height
+     * @return
+     */
+    public static BufferedImage createQRCode(String data, String charset, Map<EncodeHintType, ?> hint, int width,
+                                             int height) {
+        BitMatrix matrix;
+        try {
+            matrix = new MultiFormatWriter().encode(new String(data.getBytes(charset), charset), BarcodeFormat.QR_CODE,
+                    width, height, hint);
+            return toBufferedImage(matrix);
+        } catch (WriterException e) {
+            throw new RuntimeException(e.getMessage(), e);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage(), e);
+        }
+    }
+    private static BufferedImage toBufferedImage(BitMatrix matrix) {
+        int width = matrix.getWidth();
+        int height = matrix.getHeight();
+        BufferedImage image = new BufferedImage(width, height,
+                BufferedImage.TYPE_INT_RGB);
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                image.setRGB(x, y, matrix.get(x, y) ? BLACK : WHITE);
+            }
+        }
+        return image;
+    }
+
+    /**
+     * Create qrcode with default settings and logo
+     *
+     * @author stefli
+     * @param data
+     * @param logoFile
+     * @return
+     */
+    public static BufferedImage createQRCodeWithLogo(String data, File logoFile) {
+        return createQRCodeWithLogo(data, QRCODE_DEFAULT_WIDTH, QRCODE_DEFAULT_HEIGHT, logoFile);
+    }
+
+    /**
+     * Create qrcode with default charset and logo
+     *
+     * @author stefli
+     * @param data
+     * @param width
+     * @param height
+     * @param logoFile
+     * @return
+     */
+    public static BufferedImage createQRCodeWithLogo(String data, int width, int height, File logoFile) {
+        return createQRCodeWithLogo(data, QRCODE_DEFAULT_CHARSET, width, height, logoFile);
+    }
+
+    /**
+     * Create qrcode with specified charset and logo
+     *
+     * @author stefli
+     * @param data
+     * @param charset
+     * @param width
+     * @param height
+     * @param logoFile
+     * @return
+     */
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    public static BufferedImage createQRCodeWithLogo(String data, String charset, int width, int height, File logoFile) {
+        Map hint = new HashMap();
+        hint.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
+        hint.put(EncodeHintType.CHARACTER_SET, charset);
+
+        return createQRCodeWithLogo(data, charset, hint, width, height, logoFile);
+    }
+
+    /**
+     * Create qrcode with specified hint and logo
+     *
+     * @author stefli
+     * @param data
+     * @param charset
+     * @param hint
+     * @param width
+     * @param height
+     * @param logoFile
+     * @return
+     */
+    public static BufferedImage createQRCodeWithLogo(String data, String charset, Map<EncodeHintType, ?> hint,
+                                                     int width, int height, File logoFile) {
+        try {
+            BufferedImage qrcode = createQRCode(data, charset, hint, width, height);
+            BufferedImage logo = ImageIO.read(logoFile);
+            int deltaHeight = height - logo.getHeight();
+            int deltaWidth = width - logo.getWidth();
+
+            BufferedImage combined = new BufferedImage(height, width, BufferedImage.TYPE_INT_ARGB);
+            Graphics2D g = (Graphics2D) combined.getGraphics();
+            g.drawImage(qrcode, 0, 0, null);
+            g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+            g.drawImage(logo, (int) Math.round(deltaWidth / 2), (int) Math.round(deltaHeight / 2), null);
+
+            return combined;
+        } catch (IOException e) {
+            throw new RuntimeException(e.getMessage(), e);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage(), e);
+        }
+    }
+
+    /**
+     * Return base64 for image
+     *
+     * @author stefli
+     * @param image
+     * @return
+     */
+    public static String getImageBase64String(BufferedImage image) {
+        String result = null;
+        try {
+            ByteArrayOutputStream os = new ByteArrayOutputStream();
+            OutputStream b64 = new Base64OutputStream(os);
+            ImageIO.write(image, "png", b64);
+            result = os.toString("UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e.getMessage(), e);
+        } catch (IOException e) {
+            throw new RuntimeException(e.getMessage(), e);
+        }
+        return result;
+    }
+
+    /**
+     * Decode the base64Image data to image
+     *
+     * @author stefli
+     * @param base64ImageString
+     * @param file
+     */
+    public static void convertBase64StringToImage(String base64ImageString, File file) {
+        FileOutputStream os;
+        try {
+            byte[] bs = Base64.getDecoder().decode(base64ImageString);
+            os = new FileOutputStream(file.getAbsolutePath());
+            os.write(bs);
+            os.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e.getMessage(), e);
+        } catch (IOException e) {
+            throw new RuntimeException(e.getMessage(), e);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage(), e);
+        }
+    }
 }
