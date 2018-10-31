@@ -18,6 +18,21 @@ public class QRCodeService {
     String text = generateNumCode(12);  //随机生成的12位验证码
 
     /**
+     * 文本转化为二维码
+     * @param text
+     */
+    void createOfText(String text){
+
+        BufferedImage bufferedImage=QRCodeUtil.createQRCode(text);
+        File file = new File("D:/QRcode/"+text+".png");
+        try {
+            ImageIO.write(bufferedImage,"png",file);
+            System.out.println("完成");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
      * http创建
      * @param http
      */

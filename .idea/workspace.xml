@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd7c65b5-037c-4662-8d48-93e303fb75b2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dome/QRcode/QRCodeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dome/QRcode/QRCodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dome/QRcode/QRCodeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dome/QRcode/QRCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dome/QRcode/QRCodeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dome/QRcode/TestQRcode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dome/QRcode/TestQRcode.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/QRcode/TestQRcode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -87,8 +85,8 @@
       <file leaf-file-name="QRCodeService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/QRcode/QRCodeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+            <state relative-caret-position="59">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -517,7 +515,7 @@
       <workItem from="1536629663858" duration="713000" />
       <workItem from="1539574856515" duration="3604000" />
       <workItem from="1539673357581" duration="637000" />
-      <workItem from="1540973285037" duration="4910000" />
+      <workItem from="1540973285037" duration="5086000" />
     </task>
     <servers />
   </component>
@@ -530,7 +528,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106800000" />
+    <option name="totallyTimeSpent" value="106976000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -563,9 +561,9 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32964602" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32964602" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49755502" visible="true" weight="0.37721238" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49755502" weight="0.37721238" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.32964602" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49938875" weight="0.15929204" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49938875" visible="true" weight="0.5199115" />
       <window_info active="true" content_ui="combo" x="2310" y="126" width="420" height="869" id="Project" order="0" side_tool="true" visible="true" weight="0.30256724" />
       <window_info anchor="right" id="Bean Validation" order="6" weight="0.3294621" />
       <window_info id="Web" order="7" side_tool="true" />
@@ -993,16 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/QRcode/QRCodeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/QRcode/QRCodeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3338">
@@ -1013,10 +1001,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/QRcode/QRCodeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dome/QRcode/TestQRcode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
         </state>
       </provider>
     </entry>
