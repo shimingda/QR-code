@@ -11,7 +11,7 @@ public class TestQRcode {
 
     QRCodeService service=new QRCodeService();
     service.createOfText("天行健君子自强不息");
-    service.createOfHttp("https://blog.csdn.net/smd2575624555");
+//    service.createOfHttp("https://blog.csdn.net/smd2575624555");
     }
 
 }

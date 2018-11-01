@@ -1,12 +1,12 @@
 package com.dome.QRcode;
 
-import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
-import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import org.apache.commons.codec.binary.Base64OutputStream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -20,16 +20,19 @@ import java.util.Map;
  * @author Simon
  * @create 2018-10-31 15:57
  * @desc
+ * 最多2685个字母635个汉字
  **/
 public class QRCodeUtil {
+    public static Logger logger=LoggerFactory.getLogger(QRCodeUtil.class);
     public static final String QRCODE_DEFAULT_CHARSET = "UTF-8";
 
-    public static final int QRCODE_DEFAULT_HEIGHT = 400;
+    public static final int QRCODE_DEFAULT_HEIGHT = 4000;
 
-    public static final int QRCODE_DEFAULT_WIDTH = 400;
+    public static final int QRCODE_DEFAULT_WIDTH = 4000;
 
-    private static final int BLACK = 0xFF000000;
-    private static final int WHITE = 0xFFFFFFFF;
+    private static final int BLACK = 0xFFFF0000;//数据色
+
+    private static final int WHITE = 0xFF0000FF;//背景色
 
     /**
      * Create qrcode with default settings
@@ -86,10 +89,12 @@ public class QRCodeUtil {
                                              int height) {
         BitMatrix matrix;
         try {
-            matrix = new MultiFormatWriter().encode(new String(data.getBytes(charset), charset), BarcodeFormat.QR_CODE,
-                    width, height, hint);
+            matrix=QrCodeGenWrapper.encode(data,charset,hint,width,height);
+//            matrix = new MultiFormatWriter().encode(new String(data.getBytes(charset), charset), BarcodeFormat.QR_CODE,
+//                    width, height, hint);
             return toBufferedImage(matrix);
         } catch (WriterException e) {
+            e.printStackTrace();
             throw new RuntimeException(e.getMessage(), e);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage(), e);
@@ -232,4 +237,6 @@ public class QRCodeUtil {
             throw new RuntimeException(e.getMessage(), e);
         }
     }
+
+
 }
