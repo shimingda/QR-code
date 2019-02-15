@@ -16,6 +16,29 @@ import java.util.Random;
 public class QRCodeService {
     String text = generateName();  //随机生成的12位验证码
 
+       void createOfBg(String Text){
+           String filePath="D:/bg.jpg";
+           BufferedImage bufferedImageBg = null;
+           try {
+               bufferedImageBg = ImageIO.read(new FileInputStream(filePath));
+           } catch (IOException e) {
+               e.printStackTrace();
+           }
+           QrCodeOptions.BgImgOptions bgImgOptions= QrCodeOptions.BgImgOptions.builder().bgImg(bufferedImageBg).bgH(400).bgW(400).bgImgStyle(QrCodeOptions.BgImgStyle.PENETRATE).build();
+
+
+
+        BufferedImage bufferedImage=QRCodeUtil.createQRCode(Text);
+        File file = new File("D:/QRcode/"+text+".png");
+        try {
+            BufferedImage finalBufferImage =ImageQRUtils.drawBackground(bufferedImage,bgImgOptions);
+            ImageIO.write(finalBufferImage,"png",file);
+            System.out.println("完成");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     void createOfImage(File image){
         String inputStream2String=inputStream2String(image);
         BufferedImage bufferedImage=QRCodeUtil.createQRCode(inputStream2String);

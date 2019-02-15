@@ -1,6 +1,5 @@
 package com.dome.test;
 
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -13,10 +12,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 //@SpringJUnitConfig(classes = MainApplication.class)
 public class ReadingApplicationTest {
 
-    @Test
-    public void testRunning(){
-        TestDomeRunning testDomeRunning=new TestDomeRunning();
-        testDomeRunning.test();
-    }
+
 
 }

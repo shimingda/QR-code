@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.dome.test.ReadingApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.183 s <<< FAILURE! - in com.dome.test.ReadingApplicationTest
+initializationError(com.dome.test.ReadingApplicationTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.Exception: No runnable methods
+
