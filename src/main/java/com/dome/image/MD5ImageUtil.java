@@ -15,8 +15,8 @@ public class MD5ImageUtil {
         String s = new String("123asdfghjkl");
         System.out.println("原始：" + s);
         System.out.println("MD5后：" + MD5(s));
-        System.out.println("MD5后再加密：" + KL(MD5(s)));
-        System.out.println("解密为MD5后的：" + JM(KL(MD5(s))));
+        System.out.println("MD5后再加密：" + XorImageUtil.operate(MD5(s)));
+        System.out.println("解密为MD5后的：" + XorImageUtil.operate(XorImageUtil.operate(MD5(s))));
 
     }
 
@@ -49,25 +49,6 @@ public class MD5ImageUtil {
         return hexValue.toString();
     }
 
-    // 可逆的加密算法
-    public static String KL(String inStr) {
-        // String s = new String(inStr);
-        char[] a = inStr.toCharArray();
-        for (int i = 0; i < a.length; i++) {
-            a[i] = (char) (a[i] ^ 't');
-        }
-        String s = new String(a);
-        return s;
-    }
 
-    // 加密后解密
-    public static String JM(String inStr) {
-        char[] a = inStr.toCharArray();
-        for (int i = 0; i < a.length; i++) {
-            a[i] = (char) (a[i] ^ 't');
-        }
-        String k = new String(a);
-        return k;
-    }
 
 }

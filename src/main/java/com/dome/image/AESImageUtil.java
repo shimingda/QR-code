@@ -2,6 +2,7 @@ package com.dome.image;
 
 import com.dome.image.tool.ImageFileUtil;
 import sun.misc.BASE64Decoder;
+import sun.security.tools.keytool.CertAndKeyGen;
 
 import javax.crypto.*;
 import java.io.File;
@@ -99,7 +100,7 @@ public class AESImageUtil {
      */
     public static void main(String[] args) throws Exception {
 
-
+        CertAndKeyGen keypair = new CertAndKeyGen("RSA", "SHA1WithRSA", null);
         AESImageUtil de1 = new AESImageUtil();
 
         File srcFile = new File("C:\\Users\\Administrator\\Desktop\\文档\\image\\person\\1.jpg"); //初始文件
